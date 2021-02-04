@@ -17,18 +17,20 @@
 
     <main>
       <form id="search" class="search-api">
-          <li class="category search-term">
-                <div class="control">  <label for="searchTerm">people</label>
-                    <input id="searchTerm" type="text" placeholder="ex: luke skywalker" required>
-                </div>
-               
-                <button>search</button></div>
-              
-          </li>
-         
-        </ul>
+        <ul class="categories">
+          <li class="category subheading"><h3>Stock Search</h3></li>
+        <li class="category search-term">
+              <div class="control">  <label for="searchTerm">Enter Symbol</label>
+                  <input id="searchTerm" type="text" placeholder="ex: IBM" required>
+              </div>
+             
+              <button>search</button></div>
+            
+        </li>
        
-      </form>
+      </ul>
+     
+    </form>
      
      <!-- CONTAINER FOR SEARCH RESULTS -->
       <aside id="results" class="results">
