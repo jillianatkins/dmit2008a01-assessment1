@@ -3,10 +3,10 @@
 // API key: G2L4WF5QLHADE4S3
 
 function AlphaVantageModel(){
-    this.apiBaseURL = "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&apikey=G2L4WF5QLHADE4S3&keywords=";
+    this.apiBaseURL = "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&apikey=G2L4WF5QLHADE4S3&symbol=";
 
     this.init = function (){
-        const result = this.query("https://www.alphavantage.co/query?function=SYMBOL_SEARCH&apikey=G2L4WF5QLHADE4S3&keywords=gme")
+        const result = this.query("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&apikey=G2L4WF5QLHADE4S3&symbol=gme")
         return result;
     };
 
@@ -17,7 +17,11 @@ function AlphaVantageModel(){
     };
 
     this.search = async function (searchTerm){
-        let url = new URL(this.apiBaseURL + searchTerm)
+        let url = new URL(this.apiBaseURL)
+
+        const params = new URLSearchParams()
+        params.set('search', searchTerm)
+        url = url + params
         
         const req = await fetch(url)
         const res = await req.json()
