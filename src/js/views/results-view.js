@@ -20,3 +20,34 @@ const noResultsView = `
  <header>
 </aside>
 `;
+
+function ResultsView(viewId){
+  this.container = document.querySelector(viewId);
+
+  this.configUI = function (symbol) {
+    const elem = ejs.render(symbolView, { symbol });
+    this.container.insertAdjacentHTML("afterbegin", elem);
+  };
+
+  this.renderSymbols = function(symbols){
+    this.removeChildElements()
+    if(symbols.results.length === 0){
+      const elem = ejs.render(noResultsView)
+      this.container.insertAdjacentHTML('afterbegin', elem)
+    }
+    if(symbols.results.length !== 0){
+      symbols.results.forEach(symbol=>{
+        const elem = ejs.render(symbolView, {symbol:symbol})
+        this.container.insertAdjacementHTML('afterbegin', elem)
+      })
+    }
+  }
+
+  this.removeChildElements = function() {
+    this.container.querySelectorAll('aside').forEach(item=>{
+      this.container.removeChild(item)
+    })
+  }
+}
+
+export default ResultsView;
