@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpha Vantage API</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   </head>
   <body>
  
@@ -17,17 +19,13 @@
 
     <main>
       <form id="search" class="search-api">
-        <ul class="categories">
-          <li class="category subheading"><h3>Stock Search</h3></li>
-        <li class="category search-term">
-              <div class="control">  <label for="searchTerm">Enter Symbol</label>
-                  <input id="searchTerm" type="text" placeholder="ex: IBM" required>
-              </div>
-             
-              <button>search</button></div>
-            
-        </li>
-       
+        <ul class="search-form">
+          <li class="search-term">
+            <div class="control">  <label for="searchTerm">Enter Symbol</label>
+              <input id="searchTerm" type="text" placeholder="ex: IBM" required>
+            </div>
+            <button>search</button></div>
+          </li>
       </ul>
      
     </form>

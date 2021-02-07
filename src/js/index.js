@@ -27,7 +27,7 @@ window.addEventListener('load', function(e) {
         const stockData = getData(e.currentTarget.elements.searchTerm.value)
         stockData.then(res=> {
             if(res["Global Quote"]["01. symbol"] === undefined){
-                const errorTemplate = `<p>No results found for that symbol.</p>`
+                const errorTemplate = `<h3 class="error">No results found for that symbol.</h3>`
                 document.querySelector('.results').innerHTML = errorTemplate;
             }
             else{
