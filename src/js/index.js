@@ -18,7 +18,6 @@ window.addEventListener('load', function(e) {
         const req = await fetch(url)
         const result = await req.json()
         //console.log(result["Global Quote"]["01. symbol"])
-        console.log(result["Global Quote"])
         return result;
     }
 
