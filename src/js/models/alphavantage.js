@@ -6,7 +6,7 @@ function AlphaVantageModel(){
     this.apiBaseURL = "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&apikey=G2L4WF5QLHADE4S3&symbol=";
 
     this.init = function (){
-        const result = this.query("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&apikey=G2L4WF5QLHADE4S3&symbol=gme")
+        const result = this.query("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&apikey=G2L4WF5QLHADE4S3&symbol=ibm")
         return result;
     };
 
@@ -23,6 +23,7 @@ function AlphaVantageModel(){
         
         const req = await fetch(url)
         const res = await req.json()
+        console.log(res)
         return res
     }
 

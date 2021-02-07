@@ -1,13 +1,13 @@
 import ejs from "ejs";
 
 const symbolView = `
-<aside class="symbol">
-  <header><h3 class="symbolName"> <%= symbol.symbol %></h3></header>
+<aside class="person">
+  <header><h3 class="symbolName"></h3></header>
    
   <ul class="details" >
-  <li> opening price: <span><%= symbol.open %></span></li>
-  <li> current close price: <span><%= symbol.price %></span></li>
-  <li> current date:<span><%= symbol.currentDate %></span></li>
+  <li> opening price: <span><%= 02. open %></span></li>
+  <li> current close price: <span><%= 05. price %></span></li>
+  
   </ul>
 
 </aside>

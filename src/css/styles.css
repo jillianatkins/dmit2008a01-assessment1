@@ -274,7 +274,7 @@
    font-weight: 600;
  }
  
- .person {
+ .results {
    width: 400px;
    margin: 0.75rem auto;
    -webkit-box-shadow: 0 0 2px 0  #6a79869b;
@@ -283,12 +283,12 @@
    color: #6a7986;
  }
  
- .person h3 {
+ .results h3 {
    font-size: 1rem;
    font-weight: 500;
  }
  
- .person ul {
+ .results ul {
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -298,12 +298,12 @@
            justify-content: space-between;
  }
  
- .person span {
+ .results span {
    font-weight: 500;
    color: #6a7986;
  }
  
- .person li {
+ .results li {
    font-weight: 200;
    margin-right: 0.5rem;
  }

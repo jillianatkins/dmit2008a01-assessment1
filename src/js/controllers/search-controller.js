@@ -3,12 +3,12 @@ function SearchController(model, searchView, resultsView) {
     this.searchView = searchView;
     this.resultsView = resultsView;
   
-    // configUI - this is the initial setup for the controller
+
     this.configUI = async function () {
-      //submit event on the form
       this.searchView.view.addEventListener('submit', this.onHandleSubmit)
 
-       
+      const data = await model.init();
+      this.resultsView.configUI(data.results);
     };
   
     this.onHandleSubmit = async (e) =>{
