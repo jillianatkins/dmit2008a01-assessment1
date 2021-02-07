@@ -17,11 +17,9 @@ function AlphaVantageModel(){
     };
 
     this.search = async function (data){
-        
+
         const {symbol} = {...data}
         let url = new URL(this.apiBaseURL + symbol)
-
-        console.log(url)
         
         const req = await fetch(url)
         const res = await req.json()

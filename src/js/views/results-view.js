@@ -21,8 +21,6 @@ const noResultsView = `
 </aside>
 `;
 
-
-
 function ResultsView(viewId) {
   this.container = document.querySelector(viewId);
 
